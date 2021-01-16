@@ -1,4 +1,4 @@
-#数组模拟hash
+//数组模拟hash
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
