@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void dfs(int l,int r, string p, vector<string> &res)
+    void dfs(int l,int r, string &p, vector<string> &res)
     {
         if (l==0&&r==0)
         {
@@ -9,13 +9,13 @@ public:
         }
         if (l>0)
         {
-            p.append(1,'(');
+            p.push_back('(');
             dfs(l-1,r,p,res);
             p.pop_back();
         }
         if (r>l)
         {
-            p.append(1,')');
+            p.push_back(')');
             dfs(l,r-1,p,res);
             p.pop_back();      
         }
